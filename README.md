@@ -61,4 +61,25 @@ This software depends on environment variables being provisioned to work properl
 9. Make request to `http://127.0.0.1:5000/`, replacing the port number by whatever you have provided as the environment variable `PORT`.
 
 
+### Examples
+```json
+// Input
+{ "items": [1, 2, 3, 4, 5, 6, 7, 8] }
+
+// Output
+{ "result": [1, 2, 3, 4, 5, 6, 7, 8] }
+
+// Input 
+{ "items": [1, [2, 3], [4, 5], [6], 7, 8] }
+
+// Output
+{ "result": [1, 2, 3, 4, 5, 6, 7, 8] }
+
+// Input 
+{ "items": [1, [2, 3], [4, 5], [6], 7, 8] }
+
+// Output
+{ "result": [1, 2, [3, 4, [5, 6], 7], 8] }
+```
+
 > Happy Coding
